@@ -11,18 +11,35 @@
     <aside class="sidebar">
       <h2>NationsAlpha</h2>
       <ul>
-        <li onclick="navigate('vas')">VAS</li>
-        <li onclick="navigate('profile')">Profile</li>
-        <li onclick="navigate('declaration')">Declaration</li>
-        <li onclick="navigate('timeline')">Timeline</li>
+        <li onclick="navigate('Home')">Home</li>
+        <li onclick="navigate('Capture New App')">Capture New App</li>
+        <li onclick="navigate('Workflow')">Workflow</li>
+        <li onclick="navigate('Search')">Search</li>
+	<li onclick="navigate('Application Status')">Application Status</li>
+	<li onclick="navigate('Team')">Team</li>
+	<li onclick="navigate('About')">About</li>
+	<li onclick="navigate('Loan Cal')">Loan Cal</li>
+	<li onclick="navigate('Settings')">Settings</li>
         <!-- Add more navs as needed -->
       </ul>
     </aside>
 
-    <main class="main">
-      <header class="topbar">
+  <main class="main-content">
+      <header class="top-nav">
+        <div class="tabs">
+          <button>Profile</button>
+          <button>Lending</button>
+          <button>KYC</button>
+          <button class="active">VAS</button>
+          <button>Declaration</button>
+          <button>Attachment Info</button>
+          <button>Finalization</button>
+          <button>Timeline</button>
+        </div>
         <div class="user-info">
-          Danushka Rathnasee (WATTALA)
+          <span>Danushka Pitakotte (WATTALA)</span>
+        </div>
+      </header>
         </div>
       </header>
 
@@ -30,7 +47,7 @@
       <section id="vas" class="content-page active">
         <h3>VAS Selection for: DANUSHKA NIRUDAYA PITAKOTTE</h3>
         <form>
-          <label><input type="checkbox" /> Smart Statement / E-Advice</label>
+          <label>Smart Statement / E-Advice</label/> <input type="checkbox">
           <label><input type="checkbox" /> SMS Transaction Alert</label>
           <label><input type="checkbox" /> Debit Card</label>
 
@@ -47,3 +64,24 @@
               </label>
             </div>
             <div id="promo-options" style="display: none;">
+              <label><input type="checkbox" /> SMS</label>
+              <label><input type="checkbox" /> E-Mail</label>
+              <label><input type="checkbox" /> In-App Notification</label>
+            </div>
+          </div>
+        </form>
+        <div class="bottom-button">
+          <button class="next-btn">NEXT</button>
+        </div>
+      </section>
+
+      <!-- Placeholder for other pages -->
+      <section id="profile" class="content-page">Profile Page - Coming Soon</section>
+      <section id="declaration" class="content-page">Declaration Page - Coming Soon</section>
+      <section id="timeline" class="content-page">Timeline Page - Coming Soon</section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
