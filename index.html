@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VAS Form</title>
+  <title>VAS Web</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,55 +11,39 @@
     <aside class="sidebar">
       <h2>NationsAlpha</h2>
       <ul>
-        <li>Home</li>
-        <li>Capture New App</li>
-        <li>Workflow</li>
-        <li>Search</li>
-        <li>Application Status</li>
-        <li>Team</li>
-        <li>About</li>
-        <li>Loan Cal</li>
-        <li>Settings</li>
+        <li onclick="navigate('vas')">VAS</li>
+        <li onclick="navigate('profile')">Profile</li>
+        <li onclick="navigate('declaration')">Declaration</li>
+        <li onclick="navigate('timeline')">Timeline</li>
+        <!-- Add more navs as needed -->
       </ul>
     </aside>
 
     <main class="main">
       <header class="topbar">
-        <div class="tabs">
-          <button>Profile</button>
-          <button>Lending</button>
-          <button>KYC</button>
-          <button class="active">VAS</button>
-          <button>Declaration</button>
-          <button>Attachment Info</button>
-          <button>Finalization</button>
-          <button>Timeline</button>
-        </div>
         <div class="user-info">
-          <span>Danushka Rathnasee (WATTALA)</span>
+          Danushka Rathnasee (WATTALA)
         </div>
       </header>
 
-      <section class="form-box">
-        <h3>Primary: DANUSHKA NIRUDAYA PITAKOTTE / XXXXXXXXXX</h3>
+      <!-- VAS Page -->
+      <section id="vas" class="content-page active">
+        <h3>VAS Selection for: DANUSHKA NIRUDAYA PITAKOTTE</h3>
         <form>
-          <label><input type="checkbox" checked disabled /> Smart Statement / E-Advice</label>
-          <label><input type="checkbox" checked disabled /> SMS Transaction Alert</label>
-          <label><input type="checkbox" checked disabled /> Debit Card</label>
+          <label><input type="checkbox" /> Smart Statement / E-Advice</label>
+          <label><input type="checkbox" /> SMS Transaction Alert</label>
+          <label><input type="checkbox" /> Debit Card</label>
 
           <div class="promo-section">
             <span>Promotional Communications <span class="vas-tag">VAS</span></span>
-            <label><input type="checkbox" /> SMS</label>
-            <label><input type="checkbox" /> E-Mail</label>
-            <label><input type="checkbox" /> App Notification</label>
-          </div>
-        </form>
-      </section>
-
-      <div class="bottom-button">
-        <button class="next-btn">NEXT</button>
-      </div>
-    </main>
-  </div>
-</body>
-</html>
+            <div class="toggle-row">
+              <label>
+                <input type="radio" name="promoToggle" value="yes" onclick="togglePromo(true)" />
+                Yes
+              </label>
+              <label>
+                <input type="radio" name="promoToggle" value="no" onclick="togglePromo(false)" checked />
+                No
+              </label>
+            </div>
+            <div id="promo-options" style="display: none;">
