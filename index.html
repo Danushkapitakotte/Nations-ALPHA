@@ -91,13 +91,15 @@
       margin: 10px 0;
     }
 
-    .vas-tag {
-      background-color: #2ecc71;
-      color: white;
-      padding: 2px 6px;
-      font-size: 12px;
-      border-radius: 4px;
-      margin-left: 10px;
+    .promo-line {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .promo-line label {
+      margin-right: 10px;
+      margin-bottom: 0;
     }
 
     .promo-options {
@@ -163,38 +165,4 @@
     <div class="form-container">
       <h3>Primary: DANUSHKA NIRUDAYA PITAKOTTE / XXXXXXXXXX</h3>
 
-      <form>
-        <label><input type="checkbox" checked /> Smart Statement / E-Advice</label>
-        <label><input type="checkbox" checked /> SMS Transaction Alert</label>
-        <label><input type="checkbox" checked /> Debit Card</label>
-
-        <div class="promo-toggle">
-          <label>
-            Promotional Communications <span class="vas-tag">VAS</span>
-          </label>
-          <label><input type="radio" name="promo" value="yes" onclick="togglePromo(true)"> Yes</label>
-          <label><input type="radio" name="promo" value="no" onclick="togglePromo(false)" checked> No</label>
-        </div>
-
-        <div id="promo-options" class="promo-options" style="display: none;">
-          <label><input type="checkbox" /> SMS</label>
-          <label><input type="checkbox" /> E-Mail</label>
-          <label><input type="checkbox" /> App Notification</label>
-        </div>
-      </form>
-    </div>
-
-    <!-- NEXT Button -->
-    <div class="next-button">
-      <button>NEXT</button>
-    </div>
-  </div>
-
-  <!-- Toggle Logic -->
-  <script>
-    function togglePromo(show) {
-      document.getElementById("promo-options").style.display = show ? "block" : "none";
-    }
-  </script>
-</body>
-</html>
+      <form
