@@ -158,11 +158,43 @@
         <button>Finalization</button>
         <button>Timeline</button>
       </div>
-      <div class="user">Danushka Rathnasee (WATTALA)</div>
+      <div class="user">Danushka Pitakotte (WATTALA)</div>
     </div>
 
     <!-- Form Area -->
     <div class="form-container">
       <h3>Primary: DANUSHKA NIRUDAYA PITAKOTTE / XXXXXXXXXX</h3>
 
-      <form
+      <form>
+        <label>Smart Statement / E-Advice <input type="checkbox" checked /></label>
+        <label>SMS Transaction Alert <input type="checkbox" checked /></label>
+        <label>Debit Card <input type="checkbox" checked /></label>
+
+        <div class="promo-line">
+          <label>Promotional Communications:</label>
+          <label><input type="radio" name="promo" value="yes" onclick="togglePromo(true)"> Yes</label>
+          <label><input type="radio" name="promo" value="no" onclick="togglePromo(false)" checked> No</label>
+        </div>
+
+        <div id="promo-options" class="promo-options" style="display: none;">
+          <label><input type="checkbox" /> SMS</label>
+          <label><input type="checkbox" /> E-Mail</label>
+          <label><input type="checkbox" /> App Notification</label>
+        </div>
+      </form>
+    </div>
+
+    <!-- NEXT Button -->
+    <div class="next-button">
+      <button>NEXT</button>
+    </div>
+  </div>
+
+  <!-- Toggle Logic -->
+  <script>
+    function togglePromo(show) {
+      document.getElementById("promo-options").style.display = show ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
